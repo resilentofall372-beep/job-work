@@ -174,7 +174,7 @@ export default function Dashboard({
               <span className="bar" />
               <div className="main">
                 <div className="t">
-                  <a href={j.link} target="_blank" rel="noopener noreferrer">{j.title}</a>
+                  <a href={j.link} target="_blank" rel="noopener noreferrer" onClick={() => s === "new" && mark(j.id, "applied")}>{j.title}</a>
                   <span className="co">{j.company}</span>
                   <span className="badge" style={{ ["--lc" as string]: lc(j.level) }}>{lv.name}</span>
                   {daysAgo(j.posted) <= 2 && <span className="fresh">New</span>}
